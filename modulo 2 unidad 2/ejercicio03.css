@@ -1,28 +1,31 @@
 .contenedor{
     border: 2px solid black;
-    width: 450px;
-    height: 450px;
-    margin: 0 auto;
-    display: flex;
+    width: 1350px;
+    height: 200px;
+    margin: 10px auto;
+    display: inline-flex;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 .caja{
-    width: 150px;
-    height: 150px;
-    display: flex;
+    width: 200px;
+    height: 200px;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
+
 .item1{
     background: red;
     color: white;
+    margin-right: 380px;
 }
 .item2{
     background: blue;
     color: white;
+    margin-right: 380px;
 }
 .item3{
-    background:green;
+    background: green;
     color: white;
 }
