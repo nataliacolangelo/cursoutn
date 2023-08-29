@@ -17,6 +17,7 @@ header {
 
 header img {
     padding: 5px;
+   
 }
 
 header h1 {
@@ -59,7 +60,7 @@ nav ul li a {
     text-align: center;
 }
 nav ul li a:hover {
-    background-color: #313131;
+    background-color:black;
 }
 
 footer {
@@ -72,7 +73,7 @@ footer {
     margin-top: 20px;
 }
 nav ul li a.activo {
-    background-color: #313131;
+    background-color:black;
 }
 .holder {
     max-width: 960px;
@@ -90,25 +91,29 @@ h2{
     font-weight: 200;
     font-size: 35px;
 }
-.bienvenidos{ 
+.Bienvenidos{ 
     padding-right: 10px;
     box-sizing: border-box;
 }
  p{ color: white;
 font-size: 13px;}
+/*fin inicio*/
+/*inicio nosotros*/
 
-.cuerpotécnico { font-size: 12px;
+.Cuerpotécnico { font-size: 12px;
 }
-.categorías { display: flex;
+.Categorías { display: flex;
 justify-content: space-around;}
 
  h3{ color: white;
+    background: black;
 font-weight: normal;
-font-size: 25px;
+font-size: 20px;
 }
+/*fin nosotros*/
+/*inicio rugby*/
 
-
-.rugby{
+.Rugby{
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 16px;
@@ -117,7 +122,7 @@ font-size: 25px;
     gap: 32px;
     align-items: center;
 }
-.rugby .infoh4{ 
+.Rugby .infoh4{ 
     color: white;
     font-weight: 500;
     font-style: italic;
@@ -125,16 +130,83 @@ font-size: 25px;
     padding-bottom: 10px;
 }
 h4{ color: white;}
-.rugby .info p{
+.Rugby .info p{
     font-size: 13px;
 }
 
-.rugby img{ border-radius: 13px;
+.Rugby img{ border-radius: 13px;
 display: block;
 max-width: 225px;
 }
 
-.rugby:nth-child(even){
+.Rugby:nth-child(even){
     flex-direction: row-reverse;
 }
+/*fin rugby*/
+/*inicio galeria*/
 
+.Galeria{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(35deg, rgba(0, 0, 0, 1) 0%, rgba(5, 4, 41, 1) 55%, rgba(0, 0, 0, 1) 100%);
+
+
+}
+.Galeria img{
+    width: 35%;
+    border: 1px solid #ddd;
+    padding: 3px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+/*fin galeria*/
+/*inicio contacto*/
+
+.contacto{
+    display: flex;
+    gap: 24px;
+}
+.contacto div { width: 100%;
+}
+.Datos p{ 
+    font-size: 14px;
+}
+.Datos ul li {
+    font-size: 15px;
+}
+.Formulario p{
+    display: flex;
+}
+.Formulario p label{
+    min-width: 80px;
+}
+.Formulario p label{
+    display: flex;
+    align-items: center;
+}
+.Formulario p:nth-child(4){
+    align-items: start;
+}
+.Formulario textarea{
+    resize: none;
+    height: 150px;
+}
+.Formulario input[type="submit"] {
+    background: gray;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+    color:black;
+    font-size: 16px;
+    padding: 6px 20px;
+    width: auto;
+    position: relative;
+    left: 5rem;
+    cursor: pointer;
+}
+
+.Formulario input[type="submit"]:hover {
+    background-color:lightgrey;
+}
