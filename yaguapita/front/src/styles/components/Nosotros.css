@@ -1,0 +1,10 @@
+.Cuerpotécnico { font-size: 12px;
+}
+.Categorías { display: flex;
+justify-content: space-around;}
+
+ h3{ color: white;
+    background: black;
+font-weight: normal;
+font-size: 20px;
+}

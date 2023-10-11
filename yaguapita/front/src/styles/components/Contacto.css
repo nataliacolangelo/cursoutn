@@ -1,0 +1,44 @@
+.contacto{
+    display: flex;
+    gap: 24px;
+}
+.contacto div { width: 100%;
+}
+.Datos p{ 
+    font-size: 14px;
+}
+.Datos ul li {
+    font-size: 15px;
+}
+.Formulario p{
+    display: flex;
+}
+.Formulario p label{
+    min-width: 80px;
+}
+.Formulario p label{
+    display: flex;
+    align-items: center;
+}
+.Formulario p:nth-child(4){
+    align-items: start;
+}
+.Formulario textarea{
+    resize: none;
+    height: 150px;
+}
+.Formulario input[type="submit"] {
+    background: gray;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+    color:black;
+    font-size: 16px;
+    padding: 6px 20px;
+    width: auto;
+    position: relative;
+    left: 5rem;
+    cursor: pointer;
+}
+
+.Formulario input[type="submit"]:hover {
+    background-color:lightgrey;
+}
