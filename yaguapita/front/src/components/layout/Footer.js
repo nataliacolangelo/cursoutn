@@ -1,9 +1,9 @@
 const Footer = (props) => {
     return (
         
-        <Footer>
+        <footer>
             <p> Derechos reservados. Yaguá pitá</p>
-        </Footer>
+        </footer>
     );
 }
 export default Footer;
