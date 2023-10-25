@@ -29,7 +29,7 @@ app.use (session({
 
 app.get ('/', function (req, res){
   var conocido = Boolean ( req.session.nombre);
-  res.render(' index', {
+  res.render('index',{
     title: 'Sesiones en Express.js',
     conocido: conocido,
     nombre: req.session.nombre
