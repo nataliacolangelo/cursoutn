@@ -57,6 +57,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.use('/admin/novedades',secured, adminNovedadesRouter);
+app.use('/admin/novedades',secured,adminNovedadesRouter);
 
 module.exports = app;
