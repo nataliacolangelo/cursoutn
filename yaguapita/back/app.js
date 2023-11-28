@@ -3,8 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var fileUpload = require('express-fileupload');
 
 require('dotenv') .config();
+var session = require('express-session');
 var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index');
@@ -24,6 +26,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session( {
+  secret: 'inserte clave aqui',
+  resave: false,
+  saveUninitialized: true
+}));
+
 secured = async(req,res,next) => {
   try{
     console.log(req.session.id_usuario);
@@ -37,10 +45,15 @@ secured = async(req,res,next) => {
    }
 }
 
+app.use(fileUpload({
+  useTempfiles: true,
+  tempFileDir: '/tmp/'
+}));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
-app.use ('/admin/novedades',adminRouter);
+app.use ('/admin/novedades', adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -57,6 +70,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.use('/admin/novedades',secured,adminNovedadesRouter);
+app.use('/admin/novedades',secured, adminNovedadesRouter);
 
 module.exports = app;
