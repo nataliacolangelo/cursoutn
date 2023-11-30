@@ -57,7 +57,7 @@ router.post('/agregar', async (req, res, next) => {
             
             res.redirect('/admin/novedades')
         } else {
-            res.render('/admin/agregar', {
+            res.render('admin/agregar', {
                 layout: 'admin/layout',
                 error: true, message: 'Todos los campos requeridos'
             })
@@ -71,7 +71,7 @@ router.post('/agregar', async (req, res, next) => {
     }
 });
 
-router.get('/eliminar/:id', async (req, res, next)=>{
+router.get('/eliminar/:id', async (req, res, next)=> {
     var id = req.params.id;
     let novedad = await novedadesModel.getNovedadById(id);
     if (novedad.img_id) {

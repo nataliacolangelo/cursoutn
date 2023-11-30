@@ -30,7 +30,7 @@ try {
 }
 })
 
-router.get('logout', function ( req, res, next){
+router.get('/logout', function ( req, res, next){
     req.session.destroy();
     res.render('admin/login', {
         layout: 'admin/layout'
