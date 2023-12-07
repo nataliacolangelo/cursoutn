@@ -3,7 +3,7 @@ var md5 = require('md5');
 
 async function getUserByUsernameAndPassword(user, password) {
     try{
-        var query = "select * from usuarios where usuario = ? limit 1";
+        var query = "select * from usuarios where usuario = ?  and password = ? limit 1";
         var rows = await pool.queryI(query,[user] );
         return rows[0];
     } catch (error){
